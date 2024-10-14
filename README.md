@@ -1,7 +1,7 @@
 # VAEs for biomedical data integration
 
 ## Summary: 
-This is the repository for the paper "On the use of VAEs for biomedical data integration". This is mostly intended to be a data repository, and it also contains a short tutorial on how to reproduce the main findings of the paper. For a detailed explanation of the Multiomics Variational Autoencoder (MOVE) we refer the reader to the MOVE repository (https://github.com/RasmussenLab/MOVE). Small code edits were added for this project, and therefore we also included a snapshot of MOVE's code at the time of running it.
+This is the repository for the paper "On the use of VAEs for biomedical data integration". This is mostly intended to be a data repository, and it also contains a short tutorial on how to reproduce the main findings of the paper. For a detailed explanation of the Multiomics Variational Autoencoder (MOVE) we refer the reader to the MOVE repository (https://github.com/RasmussenLab/MOVE). Small code edits were added for this project, which are described
 
 ![Main image](images/Image_main.png)
 
@@ -12,7 +12,7 @@ This is the repository for the paper "On the use of VAEs for biomedical data int
 - **images:** Images for the repository.
 - **models:** Final trained MOVE model weights used for the paper.
 - **scripts:** Folder containing:
-  - **MOVE**. Exact folder structure and files used when running the analysis.
+  - *MOVE_edits.ipynb*. Notebook explaining what files were edited and how.
   - *AMSC_MOVE.ipynb*: Main notebook of the project. Contains the data preprocessing steps and data analysis on both synthetic data and AMSC data.
   - *Tutorial_AMSC_MOVE.ipynb*: Tutorial notebook on how to install MOVE, create a synthetic dataset, analyze the latent space and identify associations.
 
