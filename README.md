@@ -1,6 +1,6 @@
 # VAEs for biomedical data integration
 
-This is the repository for the paper "On the use of VAEs for biomedical data integration". This is mostly intended to be a data repository, and we refer the reader to MOVE for the code.
+This is the repository for the paper "On the use of VAEs for biomedical data integration". This is mostly intended to be a data repository, and we refer the reader to the MOVE repository (https://github.com/RasmussenLab/MOVE) for the code.
 - **configs:** Configuration files used to build the models using MOVE.
 - **models:** Final trained MOVE model weights used for the paper.
 - **results:** Results obtained from the analysis of synthetic datasets and the AMSC dataset.
