@@ -10,7 +10,6 @@ This is the repository for the paper "On the use of VAEs for biomedical data int
 ## Folder structure: 
 - **configs:** Configuration files used to build the models using MOVE.
 - **images:** Images for the repository.
-- **models:** Final trained MOVE model weights used for the paper.
 - **scripts:** Folder containing:
   - *MOVE_edits.ipynb*. Notebook explaining what files were edited and how.
   - *AMSC_MOVE.ipynb*: Main notebook of the project. Contains the data preprocessing steps and data analysis on both synthetic data and AMSC data.
