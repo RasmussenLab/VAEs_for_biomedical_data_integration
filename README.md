@@ -5,6 +5,7 @@ This is the repository for the paper "On the use of VAEs for biomedical data int
 
 ![Main image](images/Image_main.png)
 
+**Figure 1. Latent space visualization**. *a) Latent space representation of all samples color coded by their normalized value of the feature Continuous_B1. b) Idem for Continuous_B_2. c) Movement of all samples after perturbing positively the feature Continuous_B1. Note that, since both features are positively correlated, the perturbation brings samples towards a region where feature values for both variables are higher.*
 
 ## Folder structure: 
 - **configs:** Configuration files used to build the models using MOVE.
