@@ -14,7 +14,9 @@ This is the repository for the paper "On the use of VAEs for biomedical data int
   - *MOVE_edits.ipynb*. Notebook explaining what files were edited and how.
   - *AMSC_MOVE.ipynb*: Main notebook of the project. Contains the data preprocessing steps and data analysis on both synthetic data and AMSC data.
   - *Tutorial_AMSC_MOVE.ipynb*: Tutorial notebook on how to install MOVE, create a synthetic dataset, analyze the latent space and identify associations.
-
+    
+## Other files.
+Heavier files (e.g. model weights for the 24 refits used to identify associations are also available) were not uploaded here due to their size. 
 
 
 
