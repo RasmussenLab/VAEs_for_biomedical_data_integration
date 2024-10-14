@@ -1,0 +1,25 @@
+# DO NOT EDIT DEFAULTS
+
+defaults:
+  - base_data
+
+# FEEL FREE TO EDIT BELOW
+
+raw_data_path: synthetic_data/              # where raw data is stored
+interim_data_path: interim_data_cont_paper/  # where intermediate files will be stored
+results_path: results_cont_paper/     # where result files will be placed
+
+sample_names: random.random_all_sim.ids  # names/IDs of each sample, must appear in the
+                                # other datasets
+
+categorical_inputs: []
+  #- name: random.random_all_sim.Categorical_A
+  #- name: random.random_all_sim.Categorical_B
+
+continuous_inputs:   # a list of continuous datasets
+  - name: random.random_all_sim.Continuous_A
+    log2: true
+    scale: true
+  - name: random.random_all_sim.Continuous_B
+    log2: true
+    scale: true
