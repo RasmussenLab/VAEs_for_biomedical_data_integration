@@ -1,0 +1,50 @@
+
+defaults:
+  - identify_associations_ks_schema
+
+batch_size: 10
+
+num_refits: 5 
+sig_threshold: 0.05
+
+target_dataset: random.random_all_sim.Continuous_B
+target_value: plus_std
+save_refits: True
+
+model:
+  categorical_weights: ${weights:${data.categorical_inputs}}
+  continuous_weights: ${weights:${data.continuous_inputs}}
+  num_hidden:
+    - 50
+  num_latent: 10
+  beta: .0001
+  dropout: 0.1
+  cuda: false
+
+training_loop:
+  lr: 1e-4
+  num_epochs: 200
+  batch_dilation_steps:
+    - 50
+    - 100
+    - 150
+  kld_warmup_steps:
+    - 50
+    - 100
+    - 150
+  early_stopping: false
+  patience: 0
+
+perturbed_feature_names:
+  - Continuous_A_1
+target_feature_names:
+  - Continuous_A_1
+  - Continuous_A_2
+  - Continuous_A_3
+  - Continuous_A_4
+  - Continuous_A_5
+  - Continuous_A_6
+  - Continuous_A_7
+  - Continuous_A_8
+  - Continuous_A_9
+  - Continuous_A_10
