@@ -1,0 +1,23 @@
+# @package _global_
+
+# Define the default configuration for the data and task (model and training)
+
+defaults:
+  - override /data: AMSC
+  - override /task: tune_model_reconstruction
+
+# Configure which hyperarameters to vary
+# This will run and log the metrics of 12 models (combination of 3 hyperparams
+# with 2-3 levels: 2 * 2 * 3)
+
+# Any field defined in the task configuration can be configured below.
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      task.batch_size: 10
+      task.model.num_hidden: "[2000],[1000],[500]"
+      task.model.num_latent: 50, 100, 200
+      task.training_loop.num_epochs: 300
+      task.model.beta: .0001
