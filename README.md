@@ -1,7 +1,10 @@
 # VAEs for biomedical data integration
 
 ## Summary: 
-This is the repository for the paper "On the use of VAEs for biomedical data integration". It contains the code and configs used in the paper, but also includes a short [tutorial](https://colab.research.google.com/github/RasmussenLab/VAEs_for_biomedical_data_integration/blob/main/scripts/Tutorial_VAEs_for_biomedical_data_integration.ipynb) on how to reproduce the main findings of the paper. For a detailed explanation of the Multiomics Variational Autoencoder (MOVE) we refer the reader to the MOVE repository (https://github.com/RasmussenLab/MOVE). Small code edits were added for this project, which are described in a separate notebook.
+This is the repository for the paper "On the use of VAEs for biomedical data integration". It contains the code and configs used in the paper, but also includes a short tutorial on how to reproduce the main findings of the paper:
+[![open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/RasmussenLab/VAEs_for_biomedical_data_integration/blob/main/scripts/Tutorial_VAEs_for_biomedical_data_integration.ipynb) 
+
+For a detailed explanation of the Multiomics Variational Autoencoder (MOVE) we refer the reader to the MOVE repository (https://github.com/RasmussenLab/MOVE). Small code edits were added for this project, which are described in a separate notebook.
 
 ![Main image](images/Image_main.png)
 
