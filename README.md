@@ -8,10 +8,10 @@ This is the repository for the paper "On the use of VAEs for biomedical data int
 **Figure 1. Latent space visualization**. *a) Latent space representation of all samples color coded by their normalized value of the feature Continuous_B1. b) Idem for Continuous_B_2. c) Movement of all samples after perturbing positively the feature Continuous_B1. Note that, since both features are positively correlated, the perturbation brings samples towards a region where feature values for both variables are higher.*
 
 ## Repository structure: 
-- **configs:** Configuration files used to build the models using MOVE.
+- **configs:** The MOVE framework uses [hydra](https://hydra.cc/docs/intro/) to manage and define most hyperparameters related to model architecture and training. These hyperparameters are specified in a number of configuration files. This folder contains the baseline configuration files we used to build the models.
 - **images:** Images for the repository.
 - **scripts:** Folder containing:
-  - *MOVE_edits.ipynb*. Notebook explaining what files were edited and how.
+  - *MOVE_edits.ipynb*. Notebook explaining what files in the MOVE source code were modified for this project and how.
   - *AMSC_MOVE.ipynb*: Main notebook of the project. Contains the data preprocessing steps and data analysis on both synthetic data and AMSC data.
   - *Tutorial_VAEs_for_biomedical_data_integration.ipynb*: notebook on how to install MOVE, create a synthetic dataset, analyze the latent space, identify associations and visualize the perturbation effects on sample embeddings. The following hyperlink opens it as a Google Colab notebook:
 
