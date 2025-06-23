@@ -1,0 +1,26 @@
+defaults:
+  - base_data
+
+raw_data_path: ibdmdb_data/
+interim_data_path: interim_data_ibdmdb/
+results_path: results_ibdmdb/
+
+sample_names: ibdmdb.ids
+
+categorical_inputs:
+  - name: aligned_ibd
+  - name: aligned_dysbiosis
+
+continuous_inputs:
+  - name: aligned_mbx
+    log2: true
+    scale: true
+    weight: 1
+  - name: aligned_mgx
+    log2: true
+    scale: true
+    weight: 1
+  - name: aligned_mtx
+    log2: true
+    scale: true
+    weight: 1

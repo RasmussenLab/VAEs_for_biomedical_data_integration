@@ -1,0 +1,36 @@
+
+defaults:
+  - identify_associations_bayes
+
+batch_size: 10
+
+num_refits: 5 
+sig_threshold: 0.05
+
+target_dataset: LUAD_miRNA_aligned_MOVE
+target_value: plus_std
+save_refits: True
+
+model:
+  categorical_weights: ${weights:${data.categorical_inputs}}
+  continuous_weights: ${weights:${data.continuous_inputs}}
+  num_hidden:
+    - 256
+  num_latent: 32
+  beta: .0001
+  dropout: 0.1
+  cuda: false
+
+training_loop:
+  lr: 1e-4
+  num_epochs: 300
+  batch_dilation_steps:
+    - 50
+    - 100
+    - 150
+  kld_warmup_steps:
+    - 50
+    - 100
+    - 150
+  early_stopping: false
+  patience: 0

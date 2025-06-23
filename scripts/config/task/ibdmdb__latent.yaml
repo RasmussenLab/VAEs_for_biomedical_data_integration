@@ -1,0 +1,33 @@
+defaults:
+  - analyze_latent
+
+batch_size: 16
+
+feature_names:
+  - IBD_status
+  - dysbiosis
+  - carnitine
+  - s__Bacteroides_stercoris
+  - s__Roseburia_hominis
+  - s__Alistipes_putredinis
+  - cholate
+  
+model:
+  num_hidden:
+    - 256
+  num_latent: 32
+  beta: .0001
+
+training_loop:
+  lr: 1e-4
+  num_epochs: 400
+  batch_dilation_steps:
+    - 50
+    - 100
+    - 150
+  kld_warmup_steps:
+    - 50
+    - 100
+    - 150
+  early_stopping: false
+  patience: 0

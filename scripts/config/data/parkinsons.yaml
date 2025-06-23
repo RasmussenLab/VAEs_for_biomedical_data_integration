@@ -1,0 +1,34 @@
+# DO NOT EDIT DEFAULTS
+
+defaults:
+  - base_data
+
+# FEEL FREE TO EDIT BELOW
+
+raw_data_path: parkinsons_data/              # where raw data is stored
+interim_data_path: interim_data_parkinsons/  # where intermediate files will be stored
+results_path: results_parkinsons/     # where result files will be placed
+
+sample_names: parkinsons.ids  # names/IDs of each sample, must appear in the
+                                # other datasets
+
+categorical_inputs:
+  - name: demographics
+  - name: medication
+
+continuous_inputs:   # a list of continuous datasets
+  - name: age_related
+    log2: false
+    scale: true
+  - name: motor_scale
+    log2: false
+    scale: true
+  - name: overview_of_motor_exam
+    log2: false
+    scale: true
+  - name: speech_1
+    log2: false
+    scale: true
+  - name: speech_2
+    log2: false
+    scale: true

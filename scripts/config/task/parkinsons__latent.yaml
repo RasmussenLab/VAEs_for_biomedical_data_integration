@@ -1,0 +1,28 @@
+defaults:
+  - analyze_latent
+
+batch_size: 10
+
+feature_names:
+  - Gender
+  - Duration  of  pause  intervals  (ms)
+
+model:
+  num_hidden:
+    - 20
+  num_latent: 10
+  beta: .0001
+
+training_loop:
+  lr: 1e-4
+  num_epochs: 300
+  batch_dilation_steps:
+    - 50
+    - 100
+    - 150
+  kld_warmup_steps:
+    - 50
+    - 100
+    - 150
+  early_stopping: false
+  patience: 0

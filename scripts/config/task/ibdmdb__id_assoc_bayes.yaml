@@ -1,12 +1,13 @@
+
 defaults:
-  - identify_associations_ks_schema
+  - identify_associations_bayes
 
-batch_size: 10
+batch_size: 16
 
-num_refits: 32
-sig_threshold: 0.01
+num_refits: 10 
+sig_threshold: 0.1
 
-target_dataset: Cyto
+target_dataset: aligned_mgx
 target_value: plus_std
 save_refits: True
 
@@ -14,29 +15,22 @@ model:
   categorical_weights: ${weights:${data.categorical_inputs}}
   continuous_weights: ${weights:${data.continuous_inputs}}
   num_hidden:
-    - 500
-  num_latent: 200
+    - 256
+  num_latent: 32
   beta: .0001
   dropout: 0.1
   cuda: false
 
 training_loop:
   lr: 1e-4
-  num_epochs: 300
+  num_epochs: 400
+  batch_dilation_steps:
+    - 50
+    - 100
+    - 150
   kld_warmup_steps:
     - 50
     - 100
-    - 125
     - 150
-    - 175
-    - 200
-    - 225
-    - 250
-    - 275
   early_stopping: false
   patience: 0
-
-perturbed_feature_names:
-  - prs.5cluster3_obesity
-target_feature_names:
-  - gps_t2d

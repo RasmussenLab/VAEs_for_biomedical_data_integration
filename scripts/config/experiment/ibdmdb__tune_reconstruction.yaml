@@ -1,0 +1,22 @@
+# @package _global_
+
+# Define the default configuration for the data and task (model and training)
+# Change task to "tune_model_stability" if you want to obtain stats about each model's stability
+
+defaults:
+  - override /data: ibdmdb
+  - override /task: tune_model_reconstruction
+
+# Configure which hyperarameters to vary
+# This will run and log the metrics of 4 models (combination of 2 hyperparams with 2 levels: 2 * 2)
+
+# Any field defined in the task configuration can be configured below.
+
+hydra:
+  mode: MULTIRUN
+  sweeper:
+    params:
+      task.batch_size: 16, 32
+      task.model.num_hidden: "[256], [512]"  # example to test 2 architectures: "[100],[720]"
+      task.model.num_latent: 8, 32, 64
+      task.training_loop.num_epochs: 400
