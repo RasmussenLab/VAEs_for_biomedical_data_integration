@@ -5,6 +5,15 @@ batch_size: 10
 
 feature_names:
   - Continuous_A_1
+  - Continuous_A_2
+  - Continuous_A_3
+  - Continuous_A_4
+  - Continuous_A_5
+  - Continuous_A_6
+  - Continuous_A_7
+  - Continuous_A_8
+  - Continuous_A_9
+  - Continuous_A_10
   - Continuous_B_1
   - Continuous_B_2
   - Continuous_B_3
@@ -13,7 +22,10 @@ feature_names:
   - Continuous_B_6
   - Continuous_B_7
   - Continuous_B_8
+  - Continuous_B_9
+  - Continuous_B_10
   - Categorical_A_1
+  - Categorical_B_1
 
 model:
   num_hidden:
