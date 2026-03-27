@@ -1,7 +1,7 @@
-# VAEs for biomedical data integration
+# On the use of VAEs for biomedical data integration
 
 ## Summary: 
-This is the repository for the paper _On the use of VAEs for biomedical data integration_. It contains the code and configs used in the paper, but also includes a short tutorial on how to reproduce our main findings. For a detailed explanation of the Multiomics Variational Autoencoder (MOVE) we refer the reader to the [MOVE repository](https://github.com/RasmussenLab/MOVE). Small code edits were added for this project, which are described in a separate notebook.
+This is the repository for the paper _On the use of VAEs for biomedical data integration_. It contains the code and main configs used in the paper, but also includes a short tutorial on how to reproduce our main findings regarding the emerging latent space dynamics. For a detailed explanation of the Multiomics Variational Autoencoder (MOVE) python package we refer the reader to the [MOVE repository](https://github.com/RasmussenLab/MOVE). Small code edits were added for this project, which are described in a separate notebook.
 
 ![Main image](images/Image_main.png)
 
@@ -10,7 +10,11 @@ This is the repository for the paper _On the use of VAEs for biomedical data int
 ## Repository structure: 
 - **images:** Images for the repository.
 - **scripts:** Folder containing:
-  - *On_the_use_of_VAEs_for_biomedical_data_integration.ipynb*: Main notebook of the project. Contains the data preprocessing steps and data analysis on both synthetic data and Inflammatory Bowel Disease (IBD) data.
+  - *On_the_use_of_VAEs_for_biomedical_data_integration.ipynb*: Main notebook of the project describing the obtention, preprocessing and analyses of the following datasets:
+     1) **Synthetic dataset:** Data generated on the fly, used to illustrate the emerging latent dynamics on a dataset with well defined ground truths.
+     2) **Inflammatory Bowel Disease (IBD) multiomics dataset:** We applied MOVE to the data from the [IBDMDB](https://ibdmdb.org/). The dataset is used to show the multiomics data integration axis of MOVE in a real-world biomedical setting.
+     3) **Perturb-seq datasets on K562 and RPE1:** We used [Replogle's datasets](https://doi.org/10.1016/j.cell.2022.05.013) as provided by [GEARS](https://www.nature.com/articles/s41587-023-01905-6) to benchmark the performance of the *in silico* perturbational approaches of MOVE with that of the other models presented in [Ahlmann-Eltze et al.](https://doi.org/10.1038/s41592-025-02772-6).
+
   - *MOVE_edits.ipynb*. Notebook explaining what files in the MOVE source code were modified for this project and how.
   - *Tutorial_VAEs_for_biomedical_data_integration.ipynb*: notebook on how to install MOVE, create a synthetic dataset, analyze the latent space, identify associations and visualize the perturbation effects on sample embeddings. The following hyperlink opens it as a Google Colab notebook:
 
